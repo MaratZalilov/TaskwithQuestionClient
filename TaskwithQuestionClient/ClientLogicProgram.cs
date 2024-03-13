@@ -23,7 +23,7 @@ namespace TaskwithQuestionClient
             }
             else
             {
-                MessageBox.Show("Подключение не удалось");
+                MessageBox.Show("Подключение не удалось...");
                 return;
             }
         }
