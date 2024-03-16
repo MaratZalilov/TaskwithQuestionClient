@@ -46,8 +46,8 @@ namespace TaskwithQuestionClient
             MessageBox.Show($"Подключение с {_tcpClient.Client.RemoteEndPoint} установлено");
 
             byte[] buffer = new byte[1024];
-            int b = stream.Read(buffer, 0, 1024);
-            _answerAndQuestion = Encoding.UTF8.GetString(buffer);
+            int bytes = stream.Read(buffer, 0, 1024);
+            _answerAndQuestion = Encoding.UTF8.GetString(buffer,0,bytes);
             _question = _answerAndQuestion.Split('\n');
 
             CreateButtonAndLabel(_questionCount);
@@ -115,8 +115,12 @@ namespace TaskwithQuestionClient
 
         public void SendAnswer_Click(object sender, EventArgs e)
         {
+            string answer = "";
+            //var buffer = new byte[1024];
+            //int bytes = 512;
+            var data = Encoding.UTF8.GetBytes(_answer);
             var stream = _tcpClient.GetStream();
-            stream.Write(Encoding.UTF8.GetBytes(_answer), 0, _answer.Length);
+            stream.Write(data,0,data.Length);
             MessageBox.Show("Отправлено");
         }
 
