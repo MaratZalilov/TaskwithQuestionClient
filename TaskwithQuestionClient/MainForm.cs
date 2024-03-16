@@ -24,5 +24,10 @@ namespace TaskwithQuestionClient
             Controls.Remove(ConnectButton);
             _clientLogicProgram.GetQuestionsAndAnswer();
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _clientLogicProgram.Disconnected();
+        }
     }
 }
