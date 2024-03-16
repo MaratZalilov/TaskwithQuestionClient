@@ -33,10 +33,11 @@
             // 
             // ConnectButton
             // 
+            this.ConnectButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ConnectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ConnectButton.Location = new System.Drawing.Point(488, 392);
+            this.ConnectButton.Location = new System.Drawing.Point(365, 350);
             this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(183, 54);
+            this.ConnectButton.Size = new System.Drawing.Size(155, 45);
             this.ConnectButton.TabIndex = 0;
             this.ConnectButton.Text = "Подключиться к серверу";
             this.ConnectButton.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1199, 639);
+            this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.ConnectButton);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Client";
             this.ResumeLayout(false);
 
